@@ -14,7 +14,7 @@ namespace VillageGreen.Data.Dtos
     }
     class ProgressionCommandeDTOOut
     {
-        public int IdProgressionsCommande { get; set; }
+        public int IdProgressionCommande { get; set; }
         public int? IdCommande { get; set; }
         public string NumeroCommande { get; set; }
         public int? IdEtatCommande { get; set; }

@@ -16,11 +16,9 @@ namespace VillageGreen.Data
             CreateMap<AdresseDTOIn, Adresse>();
             CreateMap<Adresse, AdresseDTOIn>();
             CreateMap<Adresse, AdresseDTOOut>()
-                .ForMember(d => d.IdVille, o => o.MapFrom(s => s.Ville.IdVille))
                 .ForMember(d => d.LibelleVille, o => o.MapFrom(s => s.Ville.LibelleVille))
                 .ForMember(d => d.CodePostal, o => o.MapFrom(s => s.Ville.CodePostal))
-                .ForMember(d => d.IdPays, o => o.MapFrom(s => s.Pays.IdPays))
-                .ForMember(d => d.NomPays, o => o.MapFrom(s => s.Pays.NomPays));
+                .ForMember(d => d.NomPays, o => o.MapFrom(s => s.Ville.Pays.NomPays));
             CreateMap<AdresseDTOOut, Adresse>();
                 }
     }

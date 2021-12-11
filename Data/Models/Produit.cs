@@ -18,7 +18,7 @@ namespace VillageGreen.Data.Models
         public string LibelleProduit { get; set; }
         public string Description { get; set; }
         public string RefProduit { get; set; }
-        public decimal PrixHorsTaxe { get; set; }
+        public decimal PrixHorsTaxes { get; set; }
         public string Photo { get; set; }
         public int Stock { get; set; }
         public int IdRubrique { get; set; }

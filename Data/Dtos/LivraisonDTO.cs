@@ -33,7 +33,7 @@ namespace VillageGreen.Data.Dtos
         public DateTime DateLivraison { get; set; }
         public int QuantiteLivraison { get; set; }
     }
-    class LivraisonDetailDTO
+    class LivraisonDetailDTOOut
     {
         public int IdLivraison { get; set; }
         public int IdCommande { get; set; }

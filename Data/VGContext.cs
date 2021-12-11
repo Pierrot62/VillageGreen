@@ -269,7 +269,7 @@ namespace VillageGreen.Data
                     .HasForeignKey(d => d.IdCommande)
                     .HasConstraintName("FK_Factures_Commandes");
 
-                entity.HasOne(d => d.IdReglementNavigation)
+                entity.HasOne(d => d.Reglement)
                     .WithMany(p => p.Factures)
                     .HasForeignKey(d => d.IdReglement)
                     .HasConstraintName("FK_Factures_Reglements");
@@ -441,7 +441,7 @@ namespace VillageGreen.Data
                     .HasMaxLength(150)
                     .HasColumnName("photo");
 
-                entity.Property(e => e.PrixHorsTaxe)
+                entity.Property(e => e.PrixHorsTaxes)
                     .HasColumnType("decimal(19,4)")
                     .HasColumnName("prixHorsTaxe");
 
@@ -463,7 +463,7 @@ namespace VillageGreen.Data
 
             modelBuilder.Entity<ProgressionCommande>(entity =>
             {
-                entity.HasKey(e => e.IdProgressionsCommande)
+                entity.HasKey(e => e.IdProgressionCommande)
                     .HasName("PRIMARY");
 
                 entity.ToTable("progressionscommande");
@@ -472,7 +472,7 @@ namespace VillageGreen.Data
 
                 entity.HasIndex(e => e.IdCommande, "FK_ProgressionsCommande_commandes");
 
-                entity.Property(e => e.IdProgressionsCommande).HasColumnType("int(11)");
+                entity.Property(e => e.IdProgressionCommande).HasColumnType("int(11)");
 
                 entity.Property(e => e.DateEtatCommande)
                     .HasColumnType("date")

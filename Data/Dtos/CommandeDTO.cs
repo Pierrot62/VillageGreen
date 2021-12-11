@@ -19,7 +19,7 @@ namespace VillageGreen.Data.Dtos
         public string NumeroCommande { get; set; }
         public DateTime DateCommande { get; set; }
         public int IdUser { get; set; }
-        public string RefUser { get; set; }
+        public string RefClient { get; set; }
         public int IdCategorieClient { get; set; }
         public string InfoReglement { get; set; }
         public int IdAdresse { get; set; }
@@ -35,8 +35,8 @@ namespace VillageGreen.Data.Dtos
         public string NumeroCommande { get; set; }
         public DateTime DateCommande { get; set; }
         public int IdUser { get; set; }
-        public string RefUser { get; set; }
-        public int CoefUser { get; set; }
+        public string RefClient { get; set; }
+        public int CoefClient { get; set; }
         public int IdCategorieClient { get; set; }
         public string LibelleCategClient { get; set; }
         public string InfoReglement { get; set; }
